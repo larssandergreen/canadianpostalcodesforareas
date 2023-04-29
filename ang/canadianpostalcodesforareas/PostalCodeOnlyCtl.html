@@ -1,0 +1,21 @@
+	<div ng-controller="AreaDefinitionPostalCodeOnlyCtl">
+		<div class="crm-group crm-block crm-form-block" ng-form="AreaDefinitionPostalCodeOnlyForm" crm-ui-id-scope>
+			<div crm-ui-field="{name: 'AreaDefinitionPostalCodeOnlyForm.postal_code', title: ts('Postal code'), required: true}">
+  		<input
+    		crm-ui-id="AreaDefinitionPostalCodeOnlyForm.postal_code"
+      	type="text"
+      	name="postal_code"
+      	ng-model="areaDefinition.postal_code"
+      	class="big crm-form-text"
+      	required
+    	/>
+		  </div>
+		</div>
+
+		<div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+			<div class="ui-dialog-buttonset">
+				<button crm-icon="fa-check" ng-click="save()" ng-disabled="AreaDefinitionPostalCodeOnlyForm.$invalid">{{ts('Save and Close')}}</button>
+				<button crm-icon="fa-times" ng-click="cancel()">{{ts('Cancel')}}</button>
+			</div>
+		</div>
+	</div>

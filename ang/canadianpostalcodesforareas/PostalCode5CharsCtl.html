@@ -1,0 +1,22 @@
+	<div ng-controller="AreaDefinitionPostalCode5CharsCtl">
+		<div class="crm-group crm-block crm-form-block" ng-form="AreaDefinitionPostalCode5CharsForm" crm-ui-id-scope>
+			<div crm-ui-field="{name: 'AreaDefinitionPostalCode3CharsForm.postal_code_5_chars', title: ts('Postal code (5 characters)'), required: true}">
+  		<input
+    		crm-ui-id="AreaDefinitionPostalCode3CharsForm.postal_code_5_chars"
+      	type="text"
+      	name="postal_code_5_chars"
+      	ng-model="areaDefinition.postal_code_5_chars"
+      	class="big crm-form-text"
+      	required
+    	/>
+    	<p class="help-block">{{ts('Enter without spaces, matching done without spaces.')}}</p>
+		  </div>
+		</div>
+
+		<div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+			<div class="ui-dialog-buttonset">
+				<button crm-icon="fa-check" ng-click="save()" ng-disabled="AreaDefinitionPostalCode3CharsForm.$invalid">{{ts('Save and Close')}}</button>
+				<button crm-icon="fa-times" ng-click="cancel()">{{ts('Cancel')}}</button>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,21 @@
+	<div ng-controller="AreaDefinitionCityOnlyCtl">
+		<div class="crm-group crm-block crm-form-block" ng-form="AreaDefinitionCityOnlyForm" crm-ui-id-scope>
+			<div crm-ui-field="{name: 'AreaDefinitionCityOnlyForm.city', title: ts('City'), required: true}">
+  		<input
+    		crm-ui-id="AreaDefinitionCityOnlyForm.city"
+      	type="text"
+      	name="city"
+      	ng-model="areaDefinition.city"
+      	class="big crm-form-text"
+      	required
+    	/>
+		  </div>
+		</div>
+
+		<div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+			<div class="ui-dialog-buttonset">
+				<button crm-icon="fa-check" ng-click="save()" ng-disabled="AreaDefinitionCityOnlyForm.$invalid">{{ts('Save and Close')}}</button>
+				<button crm-icon="fa-times" ng-click="cancel()">{{ts('Cancel')}}</button>
+			</div>
+		</div>
+	</div>
