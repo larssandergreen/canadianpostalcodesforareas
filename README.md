@@ -1,15 +1,14 @@
-# canadianpostalcodesforareas
+# Canadian postal codes for Areas CiviCRM Extension
 
-![Screenshot](/images/screenshot.png)
+Adds options for first 3 and first 5 characters of postal codes without country to the Areas extension. In Canadian postal codes, the first 3 characters define a Forward Sortation Area (a smaller city or part of a larger city) and the first 5 characters generally define a small town or rural area.
 
-(*FIXME: In one or two paragraphs, describe what the extension does and why one would download it. *)
+Also adds full postal code without country, city without country and city with country equal to or empty.
 
 The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
 ## Requirements
 
 * PHP v7.2+
-* CiviCRM (*FIXME: Version number*)
 
 ## Installation (Web UI)
 
@@ -22,7 +21,7 @@ install it with the command-line tool [cv](https://github.com/civicrm/cv).
 
 ```bash
 cd <extension-dir>
-cv dl canadianpostalcodesforareas@https://github.com/FIXME/canadianpostalcodesforareas/archive/master.zip
+cv dl canadianpostalcodesforareas@https://github.com/larssandergreen/canadianpostalcodesforareas/archive/master.zip
 ```
 
 ## Installation (CLI, Git)
@@ -31,14 +30,6 @@ Sysadmins and developers may clone the [Git](https://en.wikipedia.org/wiki/Git) 
 install it with the command-line tool [cv](https://github.com/civicrm/cv).
 
 ```bash
-git clone https://github.com/FIXME/canadianpostalcodesforareas.git
+git clone https://github.com/larssandergreen/canadianpostalcodesforareas.git
 cv en canadianpostalcodesforareas
 ```
-
-## Getting Started
-
-(* FIXME: Where would a new user navigate to get started? What changes would they see? *)
-
-## Known Issues
-
-(* FIXME *)
