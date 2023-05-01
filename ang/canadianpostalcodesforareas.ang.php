@@ -3,6 +3,7 @@
 // in CiviCRM. See also:
 // \https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_angularModules/n
 return [
+	'basePages' => ['civicrm/admin/areas'],
   'js' => [
     'ang/canadianpostalcodesforareas.js',
     'ang/canadianpostalcodesforareas/*.js',
@@ -15,9 +16,12 @@ return [
     'ang/canadianpostalcodesforareas',
   ],
   'requires' => [
+    'crmApp',
     'crmUi',
     'crmUtil',
     'ngRoute',
+    'ngSanitize',
+    'dialogService',
   ],
   'settings' => [],
 ];
