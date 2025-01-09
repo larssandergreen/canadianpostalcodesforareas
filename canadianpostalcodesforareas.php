@@ -30,15 +30,6 @@ function canadianpostalcodesforareas_civicrm_install() {
 }
 
 /**
- * Implements hook_civicrm_postInstall().
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_postInstall
- */
-function canadianpostalcodesforareas_civicrm_postInstall() {
-  _canadianpostalcodesforareas_civix_civicrm_postInstall();
-}
-
-/**
  * Implements hook_civicrm_uninstall().
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_uninstall
@@ -46,7 +37,6 @@ function canadianpostalcodesforareas_civicrm_postInstall() {
 function canadianpostalcodesforareas_civicrm_uninstall() {
   CRM_Core_DAO::executeQuery("ALTER TABLE civicrm_area_definition DROP column postal_code_3_chars");
   CRM_Core_DAO::executeQuery("ALTER TABLE civicrm_area_definition DROP column postal_code_5_chars");
-  _canadianpostalcodesforareas_civix_civicrm_uninstall();
 }
 
 /**
@@ -56,35 +46,6 @@ function canadianpostalcodesforareas_civicrm_uninstall() {
  */
 function canadianpostalcodesforareas_civicrm_enable() {
   _canadianpostalcodesforareas_civix_civicrm_enable();
-}
-
-/**
- * Implements hook_civicrm_disable().
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_disable
- */
-function canadianpostalcodesforareas_civicrm_disable() {
-  _canadianpostalcodesforareas_civix_civicrm_disable();
-}
-
-/**
- * Implements hook_civicrm_upgrade().
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_upgrade
- */
-function canadianpostalcodesforareas_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
-  return _canadianpostalcodesforareas_civix_civicrm_upgrade($op, $queue);
-}
-
-/**
- * Implements hook_civicrm_entityTypes().
- *
- * Declare entity types provided by this module.
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_entityTypes
- */
-function canadianpostalcodesforareas_civicrm_entityTypes(&$entityTypes) {
-  _canadianpostalcodesforareas_civix_civicrm_entityTypes($entityTypes);
 }
 
 function canadianpostalcodesforareas_civicrm_area_definition_fields(&$fields) {
@@ -114,12 +75,12 @@ function canadianpostalcodesforareas_civicrm_areas_angularModules(&$modules) {
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_container/
  */
 function canadianpostalcodesforareas_civicrm_container(\Symfony\Component\DependencyInjection\ContainerBuilder $container) {
-  $container->getDefinition('areas_definition_factory')
-    ->addMethodCall('addDefinitionType', array(new \Symfony\Component\DependencyInjection\Definition('Civi\Areas\DefinitionType\PostalCode3Chars')))
-    ->addMethodCall('addDefinitionType', array(new \Symfony\Component\DependencyInjection\Definition('Civi\Areas\DefinitionType\PostalCode5Chars')))
-    ->addMethodCall('addDefinitionType', array(new \Symfony\Component\DependencyInjection\Definition('Civi\Areas\DefinitionType\PostalCodeOnly')))
-    ->addMethodCall('addDefinitionType', array(new \Symfony\Component\DependencyInjection\Definition('Civi\Areas\DefinitionType\CityOnly')))
-    ->addMethodCall('addDefinitionType', array(new \Symfony\Component\DependencyInjection\Definition('Civi\Areas\DefinitionType\CityCountryNotOther')));
+   $container->getDefinition('areas_definition_factory')
+     ->addMethodCall('addDefinitionType', array(new \Symfony\Component\DependencyInjection\Definition('Civi\Areas\DefinitionType\PostalCode3Chars')))
+     ->addMethodCall('addDefinitionType', array(new \Symfony\Component\DependencyInjection\Definition('Civi\Areas\DefinitionType\PostalCode5Chars')))
+     ->addMethodCall('addDefinitionType', array(new \Symfony\Component\DependencyInjection\Definition('Civi\Areas\DefinitionType\PostalCodeOnly')))
+     ->addMethodCall('addDefinitionType', array(new \Symfony\Component\DependencyInjection\Definition('Civi\Areas\DefinitionType\CityOnly')))
+     ->addMethodCall('addDefinitionType', array(new \Symfony\Component\DependencyInjection\Definition('Civi\Areas\DefinitionType\CityCountryNotOther')));
 }
 
 // --- Functions below this ship commented out. Uncomment as required. ---
